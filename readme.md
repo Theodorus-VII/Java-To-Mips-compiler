@@ -1,21 +1,23 @@
+<hr>
 TO RUN THE PROGRAM, RUN GUI.PY
 
-SAMPLE JAVA CODE IS PROVIDED IN TRANSLATOR.PY(line 38-82) OR BACKUPJAVA.JAVA TO DEMONSTRATE OUR CODE.
+SAMPLE JAVA CODE IS PROVIDED IN BACKUPJAVA.JAVA TO DEMONSTRATE OUR CODE.
 THIS CAN BE USED TO DEMONSTRATE ALL THE STRUCTURES THAT OUR CODE CAN HANDLE
 
 JAVA CODE HAS TO BE IN A CLASS CALLED JAVA
+<hr>
 
+# Java to MIPS compiler
 
+Our project is a simple python script that translates java code into mips assembly code.
 
-Our project translates java code into mips assembly code. This is written in python
+The source code is divided into 2 main parts. _j2m_parser.py_ and _gui.py_. 
+    it writes the java code provided into _java.java_ and the translated mips code into assembly.asm
 
-The source code is divided into 2 main parts. translator.py and gui.py. 
-    it writes the java file into java.java and the assembly file into assembly.asm
-
-translator.py handles the actual code translation while gui.py is our user interface
+j2m_parser.py handles the actual code translation while gui.py is our user interface
 
 parser()
-Inside translator.py are 3 methods. this function is more like a combination of a parser and a lexer. 
+Inside j2m_parser.py are 3 methods. this function is more like a combination of a parser and a lexer. 
 It goes through our Java input line by line and separates, tokenizes and classifies the input.
 
 We mainly used WHITESPACE to achieve this, so statements such as conditionals require care when writing. 
@@ -23,7 +25,7 @@ We mainly used WHITESPACE to achieve this, so statements such as conditionals re
         for instance if(3<4) will give an error while if(3 < 4) will work fine
 
 This section of our code also handles ARITHMETIC and VARIABLE ASSIGNMENT as well.
-If it runs into any special functions, such as System.out.println() or a [for] loop, it passes that line into the functions translator method.
+If it runs into any special functions, such as System.out.println() or a [for] loop, it passes that line into the functions j2m_parser method.
 
 function_translator()
 The function translator method then determines what kind of operation the Java code maps to and translates it.

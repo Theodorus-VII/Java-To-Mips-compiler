@@ -44,3 +44,8 @@ For variables, we used temporary registers, so the number of variables available
 Inside the data segment, we store string values, be it variables or strings that were directly printed.
 There is also a line at the end of the mips output that shows our variable mappings. Number variables are set to temporary registers 0-7. $t8 and $t9 are reserved as mentioned.
 String variables are mapped to labels. the code handles this automatically
+
+## Screenshots
+![alt text](<./screenshots/Screenshot 2024-02-12 195439.png>) 
+![alt text](<./screenshots/Screenshot 2024-02-12 195456.png>)
+![alt text](<./screenshots/Screenshot 2024-02-12 195534.png>) 
